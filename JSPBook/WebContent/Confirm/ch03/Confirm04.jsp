@@ -6,7 +6,7 @@
 <title>Directives Tag</title>
 </head>
 <body>
-    <% Date day=new java.util.Date();%>
+    <% Date day=new Date();%>
     현재 날짜:<%=day %><br>
     5의 제곱:<%=Math.pow(5,2) %>
 </body>
