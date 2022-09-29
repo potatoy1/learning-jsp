@@ -6,7 +6,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%@include file="header.jsp" %>
+	<%@include file="/header.jsp" %>
 	  <% Date day=new java.util.Date();%>
     	Current Time: <%=day %>
 </body>
