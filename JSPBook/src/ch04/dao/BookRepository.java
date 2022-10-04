@@ -27,6 +27,7 @@ public class BookRepository {
 				+ "지금 당장 컴퓨터가 없어도 괜찮습니다. 코드와 실행 화면이 바로 보여서 눈으..");
 		html.setAuthor("황재호 | ");
 		html.setPublisher("한빛미디어 | ");
+		html.setFilename("B1234.png");
 		
 		listOfBooks.add(html);
 		
@@ -35,6 +36,7 @@ public class BookRepository {
 				+ "시각화 도구를 활용한 개념 설명과 군더더기 없는 핵심 코드를 통해 개념과 구현..");
 		java.setAuthor("우종종 | ");
 		java.setPublisher("한빛아카데미 | ");
+		java.setFilename("B1235.png");
 		
 		listOfBooks.add(java);
 
@@ -43,6 +45,7 @@ public class BookRepository {
 				+ "예제를 복사해 붙여넣는 식으로는 실제 개발에서 스프링을 제대로 활용할 수 없습니다..");
 		spring.setAuthor("하세가와 유이치, 오오노 와타루, 토키 코헤이(권은철, 전민수) | ");
 		spring.setPublisher("한빛미디어 | ");
+		spring.setFilename("B1236.png");
 		
 		listOfBooks.add(spring);
 	}

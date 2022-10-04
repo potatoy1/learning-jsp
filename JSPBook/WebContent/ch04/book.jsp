@@ -23,7 +23,7 @@
 </head>
 <body>
 	<!-- 머리글에 해당하는 menu.jsp 파일의 내용을 포함하도록 include 액션 태그를 작성 -->
-	<jsp:include page="menu.jsp" />
+	<jsp:include page="../ch06/menu.jsp" />
 	<div class = "jumbotron">
 		<!-- 내용 들어온다. -->
 		<div class="container">
@@ -47,6 +47,6 @@
 		</div>
 	</div>
 	<!-- ==================상품 목록 끝================== -->
-	<jsp:include page="footer.jsp" />
+	<jsp:include page="../ch06/footer.jsp" />
 </body>
 </html>

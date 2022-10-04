@@ -29,6 +29,8 @@ public class ProductRepository {
 		phone.setManufacturer("Apple");
 		phone.setUnitsInStock(1000);
 		phone.setCondition("New");
+		//ch07에서 추가
+		phone.setFilename("P1234.png");
 		
 		listOfProducts.add(phone);
 		
@@ -39,6 +41,7 @@ public class ProductRepository {
 		notebook.setManufacturer("LG");
 		notebook.setUnitsInStock(1000);
 		notebook.setCondition("Refurbished");
+		notebook.setFilename("P1235.png");
 		
 		listOfProducts.add(notebook);
 		
@@ -49,6 +52,7 @@ public class ProductRepository {
 		tablet.setManufacturer("Samsung");
 		tablet.setUnitsInStock(1000);
 		tablet.setCondition("Old");
+		tablet.setFilename("P1236.png");
 		
 		listOfProducts.add(tablet);
 	}
