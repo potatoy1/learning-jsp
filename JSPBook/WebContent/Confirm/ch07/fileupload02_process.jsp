@@ -14,11 +14,7 @@
 	Iterator params = items.iterator();
 	while(params.hasNext()){
 		FileItem fileItem = (FileItem)params.next();
-		if(fileItem.isFormField()){	
-			String name = fileItem.getFieldName(); 
-			String value = fileItem.getString("UTF-8"); 
-			out.println(name + "=" + value + "<br />");
-		}else{
+		if(!fileItem.isFormField()){	
 			String fileFieldName = fileItem.getFieldName(); 
 			String contentType = fileItem.getContentType(); 
 			long fileSize = fileItem.getSize(); 
@@ -26,7 +22,6 @@
 			fileName = fileName.substring(fileName.lastIndexOf("\\")+1);
 			File file = new File(fileUploadPath+"/"+fileName);
 			fileItem.write(file);
-			out.println("-------------------------------<br />");
 			out.println("요청 파라미터 이름 : " + fileFieldName + "<br />");
 			out.println("저장 파일 이름: " + fileName + "<br />"); 
 			out.println("파일 콘텐츠 타입: " + contentType + "<br />"); 

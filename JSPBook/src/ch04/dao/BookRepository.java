@@ -56,8 +56,8 @@ public class BookRepository {
 	}
 	
 	// 객체 타입의 변수 listOfBooks에 새로운 상품 정보를 등록하는 메소드
-	public void addBook(BookVO bookVO) {
-		listOfBooks.add(bookVO);
+	public void addBook(BookVO BookVO) {
+		listOfBooks.add(BookVO);
 	}
 	
 	// 상세보기

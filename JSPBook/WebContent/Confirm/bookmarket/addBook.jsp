@@ -1,6 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
-<%@ page import="ch04.vo.BookVO"%>
 <%@ page import="java.util.List"%>
 <%@ page import="ch04.dao.BookRepository"%>
 <!DOCTYPE html>
@@ -38,7 +37,7 @@
          <div class="form-group row">
             <label class="col-sm-2">가격</label>
             <div class="col-sm-3">
-               <input type="text" name="unitPirce" class="form-control" />
+               <input type="text" name="unitPrice" class="form-control" />
             </div>
          </div>
          <div class="form-group row">
@@ -68,7 +67,6 @@
          <div class="form-group row">
             <label class="col-sm-2">상세 정보</label>
             <div class="col-sm-3">
-               <input type="text" name="description" class="form-control" />
                <textarea name="description" rows="2" cols="50"
                 class="form-control"></textarea>
             </div>
@@ -94,9 +92,10 @@
             </div>
          </div>
           <div class="form-group row">
-            <div class="col-sm-offset-2 col-sm-10">
-              <p>파일:<input type="file" name="filename" /></p>
-            </div>
+          	<label class = "col-sm-2">이미지</label>
+	            <div class="col-sm-5">
+	              <input type="file" name="productImage" class="form-control" />
+	            </div>
          </div>
          <div class="form-group row">
             <div class="col-sm-offset-2 col-sm-10">

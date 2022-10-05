@@ -4,7 +4,8 @@
 <%@page import="ch04.dao.BookRepository"%>
 <%@page import="java.util.List"%>
 <!DOCTYPE html>
-<%//스크립틀릿 태그 
+<%
+	//스크립틀릿 태그 
 	// 기본적으로 3개의 상품이 들어 있는 객체 생성
 	BookRepository bookDAO = BookRepository.getInstance();
 	// SELECT * FROM PRODUCT

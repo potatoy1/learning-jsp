@@ -4,11 +4,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <%
-   String id = request.getParameter("id");
+	String id = request.getParameter("id");
    
    BookRepository bookRepository = BookRepository.getInstance();//객체 생성
    
-   BookVO bookVO = bookRepository.getBookById(id);
+   BookVO bookVO = bookRepository.getProductById(id);
 %>
 <c:set var="bookVO" value="<%=bookVO %>" scope="page" />
 <html>
@@ -27,6 +27,7 @@
    <!--============= 도서 목록 시작 ================-->
       <div class="container">
       <div class="row" align="left">
+      <img alt="${bookVO.name}" title="${bookVO.name}" src="/resources/images/${bookVO.filename}" style="width:200px;">
             <div class="col-md-6">
                <h3>${bookVO.category}${bookVO.name}</h3>
                <p>${bookVO.description}</p>

@@ -6,7 +6,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <%
-   //기본적으로 3개의 책이 생성되어 있는 객체 생성
+	//기본적으로 3개의 책이 생성되어 있는 객체 생성
    BookRepository bookDAO = BookRepository.getInstance();
    //SELECT * FROM BOOK
    List<BookVO> listOfBooks = bookDAO.getAllBooks();
@@ -23,7 +23,6 @@
    include 액션 태그를 작성 -->
    <jsp:include page="menu.jsp" />
    <div class="jumbotron">
-      <!-- 내용 들어온다 -->
       <div class="container">
          <h1 class="display-3">도서 목록</h1>
       </div>
