@@ -7,6 +7,7 @@
 <head>
 <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
 <title>도서 등록</title>
+<script type="text/javascript" src="/resources/js/bookValidation.js"></script>
 </head>
 <body>
 
@@ -99,7 +100,7 @@
          </div>
          <div class="form-group row">
             <div class="col-sm-offset-2 col-sm-10">
-               <input type="submit" class="btn btn-primary" value="등록" />
+               <input type="submit" class="btn btn-primary" value="등록"  onclick ="checkBook()"/>
                <a href="products.jsp" class="btn btn-primary">도서 목록</a>
             </div>
          </div>
