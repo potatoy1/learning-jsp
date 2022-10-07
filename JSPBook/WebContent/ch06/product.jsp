@@ -31,6 +31,7 @@
 	<!-- ==================상품 상세 시작================== -->
 	<div class="container">
 		<div class="row" align="center">
+		 <img alt="${productVO.pname}" title="${productVO.pname}" src="/resources/images/${productVO.filename}" style="width:200px;">
 			<div class ="col-md-6">
 			<h3>${productVO.pname}</h3>
 			<p>${productVO.description}</p>
