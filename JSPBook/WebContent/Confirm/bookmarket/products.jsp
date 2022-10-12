@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@page import="ch04.vo.BookVO"%>
-<%@page import="java.util.List"%>
-<%@page import="ch04.dao.BookRepository"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="ch04.vo.BookVO"%>
+<%@ page import="java.util.List"%>
+<%@ page import="ch04.dao.BookRepository"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page errorPage="exceptionNoPage.jsp" %>
 <!DOCTYPE html>
 <%
 	//기본적으로 3개의 책이 생성되어 있는 객체 생성

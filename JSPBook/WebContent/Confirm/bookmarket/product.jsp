@@ -2,9 +2,10 @@
 <%@ page import="ch04.vo.BookVO"%>
 <%@ page import="ch04.dao.BookRepository"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page errorPage="exceptionNoBookId.jsp" %>
 <!DOCTYPE html>
 <%
-	String id = request.getParameter("id");
+	String id = request.getParameter("id").toString();
    
    BookRepository bookRepository = BookRepository.getInstance();//객체 생성
    

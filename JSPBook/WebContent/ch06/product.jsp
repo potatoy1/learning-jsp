@@ -1,12 +1,13 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>  
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>  
-<%@page import="ch04.vo.ProductVO"%>
-<%@page import="java.util.List"%>
-<%@page import="ch04.dao.ProductRepository"%>
+<%@ page import="ch04.vo.ProductVO"%>
+<%@ page import="java.util.List"%>
+<%@ page import="ch04.dao.ProductRepository"%>
+<%@ page errorPage="exceptionNoProductId.jsp" %>
 <!DOCTYPE html>
 <%//스크립틀릿 태그 
-	String id = request.getParameter("id");
+	String id = request.getParameter("id").toString();
 	ProductRepository productRepository = ProductRepository.getInstance();
 	//상세보기 => 1행(ProductVO)을 리턴
 	//SELECT * FROM PRODUCT WHERE PRODUCT_ID = 'P1234'
