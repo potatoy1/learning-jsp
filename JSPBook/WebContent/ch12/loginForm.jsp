@@ -8,9 +8,9 @@
 <body>
 
 <form action="loginForm_process.jsp">
-<p> 아이디 : <input type="text" name="id"> 
-<p> 비밀번호 : <input type="text" name="passwd">
-<input type="submit" value="전송">
+	<p> 아이디 : <input type="text" name="id"> </p>
+	<p> 비밀번호 : <input type="text" name="passwd"></p>
+	<p><input type="submit" value="전송"></p>
 </form>
 
 </body>
