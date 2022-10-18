@@ -2,6 +2,7 @@
 <%@ page import="ch04.vo.BookVO"%>
 <%@ page import="ch04.dao.BookRepository"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page errorPage="exceptionNoBookId.jsp" %>
 <!DOCTYPE html>
 <%
@@ -17,8 +18,24 @@
 <link rel="stylesheet" 
    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <title>도서 목록</title>
+<script type="text/javascript">
+	function addToCart(){
+		console.log("왔다");
+		let result =  confirm("상품을 장바구니에 추가하시겠습니까?");
+		
+		if(result){
+			console.log("true");
+			document.addForm.submit();
+		}else{
+			console.log("false");
+			document.addForm.reset();
+		}
+	}
+	</script>
 </head>
 <body>
+	<fmt:setLocale value="${param.language}" />
+	<fmt:bundle basename="bundle.bookmessage" >
 <jsp:include page="menu.jsp" />
 <div class="jumbotron">
       <div class="container">
@@ -43,8 +60,14 @@
                <p><b>출판일  </b> : ${bookVO.releaseDate}</p>
                <h4>${bookVO.unitPrice}원</h4>
                <p>
-                  <a href="#" class="btn btn-info">도서주문&raquo;</a>
-                  <a href="products.jsp" class="btn btn-secondary">도서 목록&raquo;</a>
+                 <form name="addForm" action="addCart.jsp?id=${bookVO.bookId}" method="post">
+				<!-- 상품 주문 -> 상품을 장바구니에 넣음 -->
+				<a href="#" class="btn btn-info" onclick="addToCart()"><fmt:message key="bookOrder" />&raquo;</a>
+				<!-- 장바구니에 넣어진 상품 목록을 봄 -->
+				<a href="cart.jsp" class = "btn btn-warning">장바구니&raquo;</a>
+				<!-- 등록된 상품 목록을 봄 -->
+				<a href="products.jsp" class="btn btn-secondary"><fmt:message key="bookList" />&raquo;</a>
+			</form>
             </p>
             </div>
       </div>
@@ -52,5 +75,6 @@
    
    <!--============= 도서 목록 끝==================-->
    <jsp:include page="footer.jsp" />
+   </fmt:bundle>
 </body>
 </html>
