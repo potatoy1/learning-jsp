@@ -101,6 +101,6 @@
 	<!-- 세션 유효 시간 설정(1. web.xml에서 설정. 2.jsp에서 설정 -->
 	<session-config>
 		<!-- 단위 : 분. 기본 30분 -->
-		<session-timeout>1</session-timeout>
+		<session-timeout>30</session-timeout>
 	</session-config>
 </web-app>

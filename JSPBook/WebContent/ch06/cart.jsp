@@ -104,7 +104,7 @@
 					}//end if
 				%>
 			</table>
-			<a href=products.jsp>쇼핑계속하기</a>
+			<a href=products.jsp class="btn btn-secondary" >쇼핑계속하기</a>
 		</div>
 		<!-- 장바구니 출력 끝 -->
 	</div>
